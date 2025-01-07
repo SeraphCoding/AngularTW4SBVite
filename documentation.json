@@ -35,7 +35,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-f8e93efbc5ffb1bd8b9014d7da095920225100aed61787d86eccfa411d992706568d2176ac3ec0f464390c67de92ad4ba5feed78acfa479cf514d38c077590f8",
+            "id": "component-AppComponent-2923424d2f53c6b7dd266d05c187f88ecf08d8fcd0fb3b43d47ebe94e37427b9e9cbc2a07d9815891d5f2c9ea29fdab4cad30c9937fe67e667964ef89d12e8c7",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -62,7 +62,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 12
+                    "line": 11
                 }
             ],
             "methodsClass": [],
@@ -80,13 +80,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport {TestComponent} from '../test/test.component';\n\n@Component({\n  selector: 'app-root',\n  imports: [TestComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss'\n})\nexport class AppComponent {\n  title = 'AngularTW4SBVite';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {TestComponent} from '../test/test.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [TestComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss'\r\n})\r\nexport class AppComponent {\r\n  title = 'AngularTW4SBVite';\r\n}\r\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-test></app-test>\n"
+            "templateData": "<app-test></app-test>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -404,7 +404,7 @@
         },
         {
             "name": "TestComponent",
-            "id": "component-TestComponent-b9f055c838604b662244282c02ef4fb9d8bea9283def80c9e4974a7d669b34d51679052969a4e0850d44d1209257c6a7195f3484045670e97366a624dac070fc",
+            "id": "component-TestComponent-a531c555eefefc68b2c37e99c0e9bdfd3d442a3cb2ce4a7eecdddef0c349f6bc6437704258062985268e1040dc59b5f88fffc3bc1ff2fcc1304f7cd6b14965cd",
             "file": "src/test/test.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -428,17 +428,21 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": false,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "MatButton"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-test',\n  imports: [],\n  templateUrl: './test.component.html',\n  styleUrl: './test.component.scss'\n})\nexport class TestComponent {\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {MatButton} from '@angular/material/button';\r\n\r\n@Component({\r\n  selector: 'app-test',\r\n  imports: [\r\n    MatButton\r\n  ],\r\n  templateUrl: './test.component.html',\r\n  styleUrl: './test.component.scss'\r\n})\r\nexport class TestComponent {\r\n}\r\n",
             "styleUrl": "./test.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p class=\"font-bold text-red\">If this text is red - tailwindcss works.</p>\n"
+            "templateData": "<p class=\"font-bold text-red\">If this text is red - tailwindcss works.</p>\r\nAlso this below should display a vividly blue Material Button <br/>\r\n<button mat-flat-button>My funky button</button>\r\n"
         }
     ],
     "modules": [],
@@ -452,7 +456,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]\n}"
+                "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync()]\r\n}"
             }
         ],
         "functions": [],
@@ -468,7 +472,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]\n}"
+                    "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync()]\r\n}"
                 }
             ]
         },
