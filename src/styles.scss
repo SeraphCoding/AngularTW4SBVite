@@ -11,3 +11,6 @@
 @theme {
   --color-red: oklch(67.06% 0.2442 27.53);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
